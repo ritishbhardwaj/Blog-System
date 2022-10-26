@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{%block content%}
+    <div class="col-sm-10">
+        <h3 class="text-white my-5">Author Signup</h3>
+
+        <!-- success message -->
+        {%if messages%}
+        {%for message in messages%}
+            <p {%if message.tags%} class="alert alert-{{message.tags}} mb-5" {%endif%}> {{message}}</p>
+        {%endfor%}
+        {%endif%}
+        <!-- <form action="" method="post">
+            {{form.as_p}}
+        </form> -->
+        <form method="post" novalidate>
+            {%for fm in form%}
+                <div class="form-group">
+                {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+                </div>
+            {%endfor%}
+        <!-- {{form.as_p}} -->
+        {%csrf_token%}
+        <input type="submit" name="" value="signup" class="btn btn-primary bg-dark"><br><br>
+        </form>
+
+        <!-- non field errors -->
+        {%if form.non_field_errors%}
+            {%for error in form.non_field_errors%}
+                <p class="alert alert-danger my-3">{{error}} </p>
+            {%endfor%}
+        {%endif%}    
+
+        
+        <a href="/login" class="btn btn-primary bg-dark">login</a>
+    </div>
+{%endblock content%}
