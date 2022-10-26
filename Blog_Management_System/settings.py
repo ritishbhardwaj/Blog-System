@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-!#wb4g011q^z7du!#5a$e)ycy%pcm(*@q@hi71ewkl%3a%h=*4
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','']
+ALLOWED_HOSTS = ['127.0.0.1','blogmanagementsystem.herokuapp.com']
 
 
 # Application definition
