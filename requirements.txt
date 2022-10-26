@@ -81,4 +81,4 @@ whitenoise==6.2.0
 xdg==5
 xkit==0.0.0
 zipp==1.0.0
-python==3.10.6
+python3==3.10.6
